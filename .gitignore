@@ -1,4 +1,4 @@
-/api/node_modules
-/api/dist
 /aplicacion/node_modules
 /aplicacion/dist
+/api/node_modules
+/api/dist

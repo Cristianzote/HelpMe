@@ -14,22 +14,15 @@
 
 <body>
     <div class="header finisher-header" style="width: 100%; height: 100%;">
-        <header class="navbar">
-            <!-- Barra de navegación -->
-            <!-- Barra de búsqueda -->
-            <div class="search-container">
-                <form>
-                    <input type="text" placeholder="Buscar...">
-                    <button type="submit">Buscar</button>
-                </form>
-            </div>
-            <div class="space">
-                <a class="active" href="PyR.html">Preguntas y respuestas</a>
-                <a href="Publicaciones.html">Publicaciones</a>
-                <a href="Foros.html">Foros</a>
-                <a href="Perfil.html">Perfil</a>
-            </div>
-        </header>
+        <!-- Barra de navegación -->
+        <!-- Barra de búsqueda -->
+        <%# Menu de navegación %>
+        <%- include ("./partials/menu.ejs", {
+            "vPyr": "active",
+            "vPublicaciones": "",
+            "vForos": "",
+            "vPerfil": ""
+        }) %>
         <!-- Barra de navegación lateral -->
         <div class="sidenav">
             <h1>Chats</h1>

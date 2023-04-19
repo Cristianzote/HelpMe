@@ -4,19 +4,19 @@ import message from "./message.js";
 const caseEntorno = () => {
     switch (process.env.NODE_ENV) {
         case 'production':
-            message(`api lista en el puerto ${app.get("PORT")}`,"danger");
+            message(`api lista en el puerto http://localhost:${app.get("PORT")}/`,"danger");
             break;
 
         case 'develop':
-            message(`api lista en el puerto ${app.get("PORT")}`,"success");
+            message(`api lista en el puerto http://localhost:${app.get("PORT")}/`,"success");
             break;
 
         case 'qa':
-            message(`api lista en el puerto ${app.get("PORT")}`,"warning");
+            message(`api lista en el puerto http://localhost:${app.get("PORT")}/`,"warning");
             break;
 
         default:
-            message(`api lista en el puerto ${app.get("PORT")}`,"success");
+            message(`api lista en el puerto http://localhost:${app.get("PORT")}/`,"success");
             break;
 
     }

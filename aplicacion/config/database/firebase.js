@@ -18,8 +18,8 @@ const firebaseConfig = {
 };
 
 // Iniciar servicios de Firebase
-export const initFirebase = initializeApp(firebaseConfig);
-export const db = getFirestore();
+const initFirebase = initializeApp(firebaseConfig);
+const db = getFirestore();
 
 // Exportar las funciones de Firebase
 module.exports = db;

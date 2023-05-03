@@ -1,16 +1,17 @@
 import { Router } from 'express';
+import requireLogin from '../requireLogin.js';
 const fyg = Router();
 
 //Foros y Grupos
-fyg.get("/publicaciones/", (req, res) => {
+fyg.get("/publicaciones/", /*requireLogin,*/  (req, res) => {
     res.render("Publicaciones", {
         "title": "Publicaciones"
     });
 });
-fyg.get("/pyr/", (req, res) => {
+fyg.get("/pyr/", /*requireLogin,*/ (req, res) => {
     res.render("PyR")
 });
-fyg.get("/foros/", (req, res) => {
+fyg.get("/foros/", /*requireLogin,*/ (req, res) => {
     res.render("Foros")
 });
 

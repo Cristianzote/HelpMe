@@ -11,5 +11,11 @@
         <a class="<%= vPublicaciones %>" href="Publicaciones">Publicaciones</a>
         <a class="<%= vForos %>" href="Foros">Foros</a>
         <a class="<%= vPerfil %>" href="Perfil">Perfil</a>
+        <form id="logout-form" action="/logout" method="POST">
+            <button type="submit" class="active">Logout</button>
+        </form>
+
+        <%# activo==2 ? 'active' : '' %>
+        
     </div>
 </header>

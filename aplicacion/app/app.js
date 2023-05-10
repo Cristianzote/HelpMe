@@ -5,9 +5,10 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import caseEntorno from "../config/index.js";
 import session from 'express-session';
+import cookieParser from 'cookie-parser';
 import jwt from 'jsonwebtoken';
-//const admin = require('firebase-admin');
-import admin from 'firebase-admin';
+import bodyParser from 'body-parser';
+
 //Rutas
 import home from "./routes/homepage.routes.js"
 import fyg from "./routes/fyg.routes.js"
@@ -31,15 +32,11 @@ app.set("view engine", "ejs");
 app.set("views", path.resolve(path.join(__dirname, "views")));
 
 //midlewares
-app.use(
-    session({
-      secret: 'your-session-secret',
-      resave: false,
-      saveUninitialized: true,
-      cookie: { secure: true },
-    })
-  );
+app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(express.static("./public"));
+
+//Rutas
 app.use('/', home);
 app.use('/', others);
 app.use('/', fyg);

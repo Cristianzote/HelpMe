@@ -13,16 +13,16 @@
             <center><img src="img/Kirbo.png" width="200" height="200" class="Ico"></center>
             <h1>HelpMe</h1>
             <%# Formulario de login %>
-            <form action="/login" method="post" id="login-form">
+            <form id="login-form">
               <div class="form">
-                  <input type="email" required name="email" id="email"/>
+                  <input type="email" id="email" name="email" required/>
                       <label class="label-name">
                           <span class="content-name">Nombre</span>
                       </label>
                   </div>
               <br>
               <div class="form">
-                  <input type="password" name="password" id="password" required/>
+                  <input type="password" id="password" name="password" required/>
                   <label class="label-name">
                       <span class="content-name">Contraseña</span>
                   </label>
@@ -30,7 +30,8 @@
               <br>
               <br>
               <center>
-                  <input type="submit" value="Ingresar" class="btn-neon">
+                
+                  <input type="submit" value="Ingresar" class="btn-neon" >
                   <span id="span1"></span>
                   <span id="span2"></span>
                   <span id="span3"></span>
@@ -38,6 +39,9 @@
               </center>
               <br>
             </form>
+            <button id="googleLoginButton">
+              <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo">
+            </button>
             <br>
             <h2>¿No tienes una cuenta?</h2>
             <center>
@@ -50,13 +54,13 @@
                 </a>
         </div>
       <%# Pie de pagina %>
-    <%- include ("./partials/footer.ejs") %>
+      <%- include ("./partials/footer.ejs") %>
       </div>
 
 
       <script src="Js/finisher-header.es5.min.js" type="text/javascript"></script>
 
-      <%# include ("./partials/firebaseAuth.ejs") %>
+      <%- include ("./partials/firebaseAuth.ejs") %>
 
       <script type="text/javascript">
         new FinisherHeader({
